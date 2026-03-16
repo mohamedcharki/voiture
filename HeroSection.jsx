@@ -1,6 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+const BACKGROUND_IMAGES = [
+  'https://images.unsplash.com/photo-1555353540-64580b51c258?auto=format&fit=crop&w=2000&q=80', // BMW
+  'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=2000&q=80', // Mercedes
+  'https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=2000&q=80', // Audi
+  'https://images.unsplash.com/photo-1629897048514-3dd74152e9fc?auto=format&fit=crop&w=2000&q=80', // Toyota
+  'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=2000&q=80', // Lamborghini
+  'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=80', // Porsche
+];
 
 function HeroSection({ onOpenModal }) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [formData, setFormData] = useState({
     city: '',
     pickupDate: '',
@@ -20,12 +30,32 @@ function HeroSection({ onOpenModal }) {
     onOpenModal();
   };
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % BACKGROUND_IMAGES.length
+      );
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section 
       id="accueil" 
-      className="min-h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden pt-16"
-      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=2000&q=80')" }}
+      className="min-h-screen relative overflow-hidden pt-16 bg-gray-900"
     >
+      {/* Background Slideshow */}
+      {BACKGROUND_IMAGES.map((img, index) => (
+        <div
+          key={img}
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${
+            currentImageIndex === index ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{ backgroundImage: `url('${img}')` }}
+        />
+      ))}
+
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/60 to-transparent opacity-80"></div>
