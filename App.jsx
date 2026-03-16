@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import Navigation from './components/Navigation';
-import HeroSection from './components/HeroSection';
-import FleetSection from './components/FleetSection';
-import DestinationsSection from './components/DestinationsSection';
-import StatsSection from './components/StatsSection';
-import ServicesSection from './components/ServicesSection';
-import ReviewsSection from './components/ReviewsSection';
-import AboutSection from './components/AboutSection';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
-import ReservationModal from './components/ReservationModal';
+import Navigation from './Navigation';
+import HeroSection from './HeroSection';
+import ReservationSection from './ReservationSection';
+import FleetSection from './FleetSection';
+import DestinationsSection from './DestinationsSection';
+import StatsSection from './StatsSection';
+import ServicesSection from './ServicesSection';
+import ReviewsSection from './ReviewsSection';
+import AboutSection from './AboutSection';
+import ContactSection from './ContactSection';
+import Footer from './Footer';
+import WhatsAppButton from './WhatsAppButton';
+import ReservationModal from './ReservationModal';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,6 +31,7 @@ function App() {
     <div className="bg-gray-900 text-white min-h-screen overflow-x-hidden">
       <Navigation onOpenModal={handleOpenModal} />
       <HeroSection onOpenModal={handleOpenModal} />
+      <ReservationSection onOpenModal={handleOpenModal} />
       <FleetSection onReserve={handleOpenModal} />
       <DestinationsSection />
       <StatsSection />
