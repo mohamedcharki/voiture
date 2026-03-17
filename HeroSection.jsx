@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Calendar, Car, MapPin } from 'lucide-react';
+import { cars, cities } from './carsData';
 
 const backgroundImages = [
   'https://images.unsplash.com/photo-1555353540-64fd1b19584a?q=80&w=2000&auto=format&fit=crop', // BMW
@@ -8,9 +10,6 @@ const backgroundImages = [
   'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=2000&auto=format&fit=crop', // Lamborghini
   'https://images.unsplash.com/photo-1503376710356-be616bb1e72e?q=80&w=2000&auto=format&fit=crop'  // Porsche
 ];
-
-import { Calendar, Car, MapPin } from 'lucide-react';
-import { cars, cities } from './carsData';
 
 function HeroSection({ onSearchSubmit }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
