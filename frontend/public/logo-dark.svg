@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 90" role="img" aria-label="Enjoy Rent Car Logo">
+  <defs>
+    <linearGradient id="carGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff5252;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d32f2f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lineGradDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff5252;stop-opacity:0" />
+      <stop offset="40%" style="stop-color:#ff5252;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff5252;stop-opacity:0.3" />
+    </linearGradient>
+    <filter id="glowDark" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ff5252" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Speed lines (left) -->
+  <line x1="2" y1="33" x2="62" y2="33" stroke="url(#lineGradDark)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="8" y1="39" x2="58" y2="39" stroke="url(#lineGradDark)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="2" y1="45" x2="52" y2="45" stroke="url(#lineGradDark)" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Car body -->
+  <g filter="url(#glowDark)" transform="translate(48, 10)">
+    <path d="M 8 38 L 12 28 Q 28 14 52 12 Q 76 10 96 15 L 116 20 L 122 26 L 126 38 Z"
+          fill="url(#carGradDark)" />
+    <path d="M 20 27 Q 34 14 54 12 Q 76 10 95 15 L 110 22 L 78 22 Q 62 14 44 17 Q 30 19 22 27 Z"
+          fill="#c62828" />
+    <path d="M 45 17 Q 56 12 70 12 L 78 22 Q 62 14 44 17 Z"
+          fill="rgba(255,255,255,0.2)" />
+    <path d="M 78 22 L 95 15 L 110 22 Z"
+          fill="rgba(255,255,255,0.12)" />
+    <path d="M 8 38 L 126 38 L 122 44 Q 106 48 76 48 Q 46 48 18 44 Z"
+          fill="#b71c1c" />
+    <ellipse cx="28" cy="44" rx="14" ry="5" fill="#8b1111" />
+    <ellipse cx="100" cy="44" rx="14" ry="5" fill="#8b1111" />
+    <circle cx="28" cy="47" r="11" fill="#111" />
+    <circle cx="28" cy="47" r="7" fill="#222" />
+    <circle cx="28" cy="47" r="3" fill="#666" />
+    <circle cx="100" cy="47" r="11" fill="#111" />
+    <circle cx="100" cy="47" r="7" fill="#222" />
+    <circle cx="100" cy="47" r="3" fill="#666" />
+    <path d="M 118 24 L 128 29 L 126 36 L 118 34 Z" fill="#ffeb3b" opacity="0.9"/>
+    <path d="M 126 29 L 134 34 L 132 40 L 126 38 Z" fill="#fff9c4" opacity="0.6"/>
+    <rect x="6" y="35" width="6" height="8" rx="1" fill="#c62828" />
+  </g>
+
+  <!-- Speed lines (right) -->
+  <line x1="218" y1="36" x2="276" y2="36" stroke="#ff5252" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="222" y1="42" x2="274" y2="42" stroke="#ff5252" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+
+  <!-- ENJOY RENT CAR text — white version for dark backgrounds -->
+  <text x="70" y="78"
+        font-family="'Poppins', 'Montserrat', sans-serif"
+        font-weight="800"
+        font-size="18"
+        fill="#ffffff"
+        letter-spacing="5">ENJOY</text>
+  <text x="134" y="78"
+        font-family="'Poppins', 'Montserrat', sans-serif"
+        font-weight="800"
+        font-size="18"
+        fill="#ff5252"
+        letter-spacing="5">RENT</text>
+  <text x="193" y="78"
+        font-family="'Poppins', 'Montserrat', sans-serif"
+        font-weight="800"
+        font-size="18"
+        fill="#ffffff"
+        letter-spacing="5">CAR</text>
+
+  <!-- Thin accent line under text -->
+  <line x1="70" y1="82" x2="232" y2="82" stroke="#ff5252" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+</svg>
