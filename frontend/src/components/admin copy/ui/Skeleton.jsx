@@ -7,7 +7,7 @@ import React from 'react';
 const Skeleton = ({ className, ...props }) => {
   return (
     <div
-      className={`animate-pulse bg-gray-300 dark:bg-slate-700/50 rounded-lg ${className}`}
+      className={`animate-pulse bg-slate-800/50 rounded-lg ${className}`}
       {...props}
     />
   );
